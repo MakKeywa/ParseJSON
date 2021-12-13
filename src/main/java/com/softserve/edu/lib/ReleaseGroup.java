@@ -1,5 +1,7 @@
 package com.softserve.edu.lib;
 
+import java.util.Arrays;
+
 public class ReleaseGroup {
     private String name;
     private Release[] releases;
@@ -23,5 +25,13 @@ public class ReleaseGroup {
 
     public void setReleases(Release[] releases) {
         this.releases = releases;
+    }
+
+    @Override
+    public String toString() {
+        return "ReleaseGroup{" + "\n" +
+                "name='" + name + '\'' + "\n" +
+                ", releases=" + Arrays.toString(releases) + "\n" +
+                '}';
     }
 }

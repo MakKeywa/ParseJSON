@@ -34,4 +34,13 @@ public class Sprint {
     public void setStartDateOffset(String startDateOffset) {
         this.startDateOffset = startDateOffset;
     }
+
+    @Override
+    public String toString() {
+        return "Sprint{" + "\n" +
+                "name='" + name + '\'' + "\n" +
+                ", length='" + length + '\'' + "\n" +
+                ", startDateOffset='" + startDateOffset + '\'' + "\n" +
+                '}';
+    }
 }

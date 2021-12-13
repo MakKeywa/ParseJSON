@@ -24,4 +24,12 @@ public class RootCause {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    @Override
+    public String toString() {
+        return "RootCause{" + "\n" +
+                "name='" + name + '\'' + "\n" +
+                ", description='" + description + '\'' + "\n" +
+                '}';
+    }
 }

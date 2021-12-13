@@ -1,5 +1,7 @@
 package com.softserve.edu.lib;
 
+import java.util.Arrays;
+
 public class Company {
     private ReleaseGroup[] releaseGroups;
     private Project[] projects;
@@ -23,5 +25,13 @@ public class Company {
 
     public void setProjects(Project[] projects) {
         this.projects = projects;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{" + "\n" +
+                "releaseGroups=" + Arrays.toString(releaseGroups) + "\n" +
+                ", projects=" + Arrays.toString(projects) + "\n" +
+                '}';
     }
 }

@@ -24,4 +24,12 @@ public class ReportFile {
     public void setStartDateOffset(int startDateOffset) {
         this.startDateOffset = startDateOffset;
     }
+
+    @Override
+    public String toString() {
+        return "ReportFile{" + "\n" +
+                "fileLocation='" + fileLocation + '\'' + "\n" +
+                ", startDateOffset=" + startDateOffset + "\n" +
+                '}';
+    }
 }

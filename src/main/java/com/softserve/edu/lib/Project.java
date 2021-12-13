@@ -1,14 +1,16 @@
 package com.softserve.edu.lib;
 
+import java.util.Arrays;
+
 public class Project {
     String name;
-    ReleaseGroup releaseGroup;
+    String releaseGroup;
     ReportFile[] reportFiles;
     Project[] childProjects;
     RootCause[] rootCauses;
     Epic[] epics;
 
-    public Project(String name, ReleaseGroup releaseGroup, ReportFile[] reportFiles, Project[] childProjects, RootCause[] rootCauses, Epic[] epics) {
+    public Project(String name, String releaseGroup, ReportFile[] reportFiles, Project[] childProjects, RootCause[] rootCauses, Epic[] epics) {
         this.name = name;
         this.releaseGroup = releaseGroup;
         this.reportFiles = reportFiles;
@@ -25,11 +27,11 @@ public class Project {
         this.name = name;
     }
 
-    public ReleaseGroup getReleaseGroup() {
+    public String getReleaseGroup() {
         return releaseGroup;
     }
 
-    public void setReleaseGroup(ReleaseGroup releaseGroup) {
+    public void setReleaseGroup(String releaseGroup) {
         this.releaseGroup = releaseGroup;
     }
 
@@ -63,5 +65,17 @@ public class Project {
 
     public void setEpics(Epic[] epics) {
         this.epics = epics;
+    }
+
+    @Override
+    public String toString() {
+        return "Project{" + "\n" +
+                "name='" + name + '\'' + "\n" +
+                ", releaseGroup=" + releaseGroup + "\n" +
+                ", reportFiles=" + Arrays.toString(reportFiles) + "\n" +
+                ", childProjects=" + Arrays.toString(childProjects) + "\n" +
+                ", rootCauses=" + Arrays.toString(rootCauses) + "\n" +
+                ", epics=" + Arrays.toString(epics) + "\n" +
+                '}';
     }
 }

@@ -1,5 +1,7 @@
 package com.softserve.edu.lib;
 
+import java.util.Arrays;
+
 public class Release {
     private String name;
     private String length;
@@ -43,5 +45,15 @@ public class Release {
 
     public void setSprints(Sprint[] sprints) {
         this.sprints = sprints;
+    }
+
+    @Override
+    public String toString() {
+        return "Release{" + "\n" +
+                "name='" + name + '\'' + "\n" +
+                ", length='" + length + '\'' + "\n" +
+                ", startDateOffset='" + startDateOffset + '\'' + "\n" +
+                ", sprints=" + Arrays.toString(sprints) + "\n" +
+                '}';
     }
 }
